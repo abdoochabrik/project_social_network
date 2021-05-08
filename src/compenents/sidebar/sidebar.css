@@ -2,6 +2,8 @@
     flex: 3;
     height: 100vh;
     overflow-y :scroll;
+    position: sticky;
+    top: 50px;
 }
 
 ::-webkit-scrollbar {

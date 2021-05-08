@@ -1,6 +1,8 @@
-
+    
 import  "./sidebar.css";
+import { Users } from '../../Data';
 import {RssFeed, HelpOutline, WorkOutline, Event, School, WorkOffOutlined} from '@material-ui/icons';
+import Friend from "../friend/Friend";
 function sidebar() {
     return (
       <div className="sidebar">
@@ -31,54 +33,10 @@ function sidebar() {
                 <hr className="sidebarHr"/>
 
                 <ul className="sidebarListFriends">
-                     <li className="sidebarFriend">
-                         <img src="/assets/WhatsApp Image 2021-03-09 at 21.11.04 (2).jpeg" alt="" className="sidebarFriendImg"/>
-                         <spam className="sidebarFriendName">chabrik abdellatif</spam>
-                     </li>
-                     <li className="sidebarFriend">
-                         <img src="/assets/WhatsApp Image 2021-03-09 at 21.11.04 (2).jpeg" alt="" className="sidebarFriendImg"/>
-                         <spam className="sidebarFriendName">yassine echchetouky</spam>
-                     </li>
-                     <li className="sidebarFriend">
-                         <img src="/assets/WhatsApp Image 2021-03-09 at 21.11.04 (2).jpeg" alt="" className="sidebarFriendImg"/>
-                         <spam className="sidebarFriendName">jalal zairi</spam>
-                     </li>
-                     <li className="sidebarFriend">
-                         <img src="/assets/WhatsApp Image 2021-03-09 at 21.11.04 (2).jpeg" alt="" className="sidebarFriendImg"/>
-                         <spam className="sidebarFriendName">ibrahima coulibaly</spam>
-                     </li>
-                     <li className="sidebarFriend">
-                         <img src="/assets/WhatsApp Image 2021-03-09 at 21.11.04 (2).jpeg" alt="" className="sidebarFriendImg"/>
-                         <spam className="sidebarFriendName">chabrik abdellatif</spam>
-                     </li>
-                     <li className="sidebarFriend">
-                         <img src="/assets/WhatsApp Image 2021-03-09 at 21.11.04 (2).jpeg" alt="" className="sidebarFriendImg"/>
-                         <spam className="sidebarFriendName">yassine echchetouky</spam>
-                     </li>
-                     <li className="sidebarFriend">
-                         <img src="/assets/WhatsApp Image 2021-03-09 at 21.11.04 (2).jpeg" alt="" className="sidebarFriendImg"/>
-                         <spam className="sidebarFriendName">jalal zairi</spam>
-                     </li>
-                     <li className="sidebarFriend">
-                         <img src="/assets/WhatsApp Image 2021-03-09 at 21.11.04 (2).jpeg" alt="" className="sidebarFriendImg"/>
-                         <spam className="sidebarFriendName">ibrahima coulibaly</spam>
-                     </li>
-                     <li className="sidebarFriend">
-                         <img src="/assets/WhatsApp Image 2021-03-09 at 21.11.04 (2).jpeg" alt="" className="sidebarFriendImg"/>
-                         <spam className="sidebarFriendName">chabrik abdellatif</spam>
-                     </li>
-                     <li className="sidebarFriend">
-                         <img src="/assets/WhatsApp Image 2021-03-09 at 21.11.04 (2).jpeg" alt="" className="sidebarFriendImg"/>
-                         <spam className="sidebarFriendName">yassine echchetouky</spam>
-                     </li>
-                     <li className="sidebarFriend">
-                         <img src="/assets/WhatsApp Image 2021-03-09 at 21.11.04 (2).jpeg" alt="" className="sidebarFriendImg"/>
-                         <spam className="sidebarFriendName">jalal zairi</spam>
-                     </li>
-                     <li className="sidebarFriend">
-                         <img src="/assets/WhatsApp Image 2021-03-09 at 21.11.04 (2).jpeg" alt="" className="sidebarFriendImg"/>
-                         <spam className="sidebarFriendName">ibrahima coulibaly</spam>
-                     </li>
+                   { Users.map(u => (
+                       <Friend key={u.id} user={u} />
+                   ))}
+
                 </ul>
            </div>
       </div>
