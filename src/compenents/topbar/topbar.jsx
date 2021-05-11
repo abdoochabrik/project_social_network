@@ -6,7 +6,7 @@ function Topbar() {
 
       <div className="topbarContainer">
 
-           <div className="topbarLeft"> <span className="logo">social network</span> </div>
+           <div className="topbarLeft"> <span className="logo">CCEZ network</span> </div>
            <div className="topbarCenter">
              <div className="searchbar">
                <Search className="searchIcon" />

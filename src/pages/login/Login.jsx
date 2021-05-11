@@ -5,9 +5,9 @@ export default function Login() {
       <div className="login">
           <div className="loginWrapper">
               <div className="loginLeft">
-                    <h3 className="loginLogo">CCEZsocial</h3>
+                    <h3 className="loginLogo">CCEZ network</h3>
                     <span className="loginD">
-                        Connect with your friends on CCEZ SOCIAL.
+                        Connect with your friends on CCEZ Network.
                     </span>
               </div>
 
