@@ -1,39 +1,54 @@
 import {MoreVert} from '@material-ui/icons'
 import  "./post.css"; 
-import { Users } from "../../Data";
-import { useState } from 'react';
+//import { Users } from "../../Data";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function Post({ post }) {
 
-const [like,setlike]=useState(post.like);
+const [like,setlike]=useState(post.likes.length);
 const [isliked,setIsliked]=useState(false);
+const PF = process.env.REACT_APP_PUBLIC_FOLDER ;
 
 const likeHandler = () => {
     setlike(isliked ? like-1 : like+1);
     setIsliked(!isliked);
 }
+const [user,setUser]=useState([]);
+
+      useEffect( () => {
+            const fetchUsers =  async () => {
+                  const res =  await axios.get(`Users/${post.userId}`);
+                  setUser(res.data);
+                  console.log(res)
+            }
+            fetchUsers();
+            
+      },[]
+
+      )
 
     return (
       <div className="post" >
             <div className="postWrapper">
                   <div className="postTop">
                       <div className="postTopLeft">
-                             <img src="/assets/WhatsApp Image 2021-03-09 at 21.11.04 (2).jpeg" alt="" className="postProfileImage"/>
-                             <span className="postUserName">{ Users.filter(u => u.id === post.userId)[0].username}</span>
+                             <img src={user.picture || PF+"/post/avatarP.jpg"} alt="" className="postProfileImage"/>
+                             <span className="postUserName">{ user.username}</span>
                       </div>
                       <div className="postTopRight"> 
                             <MoreVert/>
                       </div>
                   </div>
                   <div className="postCenter">
-                      <span className="postText">{ post?.desc }</span>
-                      <img src="/assets/WhatsApp Image 2021-03-09 at 21.11.04 (2).jpeg" alt="" className="postImage"/>
+                      <span className="postText">{ post?.descripton }</span>
+                      <img src={PF+post.photo} alt="" className="postImage"/>
                   </div>
                   <div className="postBottom">
 
                         <div className="postBottomLeft">
-                            <img src="/assets/j'aime.jpg" alt="" onClick= { likeHandler } className="aimer"/>
-                            <span className="nombreAimer">{ like }</span>
+                            <img src={`${PF}/j'aime.jpg`} alt="" onClick= { likeHandler } className="aimer"/>
+                            <span className="nombreAimer">{ like } like this post</span>
                         </div>
 
                         <div className="postBottomright">

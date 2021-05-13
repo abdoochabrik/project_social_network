@@ -3,6 +3,7 @@ import  "./sidebar.css";
 import { Users } from '../../Data';
 import {RssFeed, HelpOutline, WorkOutline, Event, School, WorkOffOutlined} from '@material-ui/icons';
 import Friend from "../friend/Friend";
+
 function sidebar() {
     return (
       <div className="sidebar">

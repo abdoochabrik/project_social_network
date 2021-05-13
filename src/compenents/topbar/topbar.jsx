@@ -1,7 +1,9 @@
 import './topbar.css'
 import { Search, Person, Chat, Notifications } from '@material-ui/icons'
+import { Link } from 'react-router-dom'
 
 function Topbar() {
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
     return (
 
       <div className="topbarContainer">
@@ -15,8 +17,14 @@ function Topbar() {
            </div>
            <div className="topbarRight">
              <div className="topbarLinks">
-               <span className="topbarLink">Home</span>
-               <span className="topbarLink">Deconnexion</span>
+               <Link to="/" style={{textDecoration:"none"}}>
+                   <span className="topbarLink">Home</span>
+               </Link>
+          
+               <Link to="/login" style={{textDecoration:"none"}} >
+                    <span className="topbarLink">Deconnexion</span>       
+               </Link>
+        
              </div>
              <div className="topbarIcons">
                <div className="topbarIconItem">
@@ -32,7 +40,7 @@ function Topbar() {
                  <span className="topbarIconBadge">3</span>
                </div>
              </div>
-             <img src="/assets/WhatsApp Image 2021-03-09 at 21.11.04 (2).jpeg" alt="" className="topbarImage"/>
+             <img src={`${PF}/j'aime.jpg`}  alt="" className="topbarImage"/>
            </div>
       </div>
     );
