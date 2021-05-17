@@ -2,7 +2,51 @@ export const Users = [
     {
         id: 1,
         profilePicture: "assets/person/1.jpeg",
-        username: "chabrik abdellatif"
+        username: "chabrik abdellatif",
+    },
+
+    {
+        id: 2,
+        profilePicture: "assets/person/2.jpeg",
+        username: "ya ssi ne"
+    },
+    
+    {
+        id: 3,
+        profilePicture: "assets/person/3.jpeg",
+        username: "zairi jalal"
+    },
+    {
+        id: 4,
+        profilePicture: "assets/person/4.jpeg",
+        username: "ibraaa hima"
+    },
+    {
+        id: 1,
+        profilePicture: "assets/person/1.jpeg",
+        username: "chabrik abdellatif",
+    },
+
+    {
+        id: 2,
+        profilePicture: "assets/person/2.jpeg",
+        username: "ya ssi ne"
+    },
+    
+    {
+        id: 3,
+        profilePicture: "assets/person/3.jpeg",
+        username: "zairi jalal"
+    },
+    {
+        id: 4,
+        profilePicture: "assets/person/4.jpeg",
+        username: "ibraaa hima"
+    },
+    {
+        id: 1,
+        profilePicture: "assets/person/1.jpeg",
+        username: "chabrik abdellatif",
     },
 
     {
@@ -22,6 +66,8 @@ export const Users = [
         username: "ibraaa hima"
     }
     
+    
+    
 ];
 
 export const Posts = [
@@ -31,7 +77,7 @@ export const Posts = [
         photo: "assets/post/1.jpeg",
         userId: 1,
         like: 32,
-        Comment: 9 
+        Comment:9
     },
     {
         id: 2,

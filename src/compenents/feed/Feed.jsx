@@ -1,18 +1,26 @@
-
 import  "./feed.css";
-import Share from '../../compenents/share/Share'
 import Post from '../../compenents/post/Post' 
+import { Posts } from '../../Data';
+import ShareContainer from '../../containers/ShareContainer'
+import { useEffect } from 'react'
 
-function Feed() {
+
+function Feed({postsData, getPosts}) {
+
+      console.log(postsData)
+
+      useEffect(() => {
+            getPosts()
+            
+      }, [getPosts])
+
     return (
       <div className="feed" >
             <div className="Wrapper">
-                  <Share/>
-                  <Post/>
-                  <Post/>
-                  <Post/>
-                  <Post/>
-                  <Post/>
+                  <ShareContainer/>
+                  { Posts.map((p) => (
+                  <Post key={p.id} post={p} />
+                  ))}
             </div>
       </div>
     );

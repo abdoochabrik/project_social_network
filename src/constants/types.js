@@ -1,0 +1,6 @@
+export const ADD_POST = 'ADD_POST';
+export const DELETE_POST = 'DELETE_POST';
+export const UPDATE_POST = 'UPDATE_POST';
+export const LOADING_POSTS ="LOADING_POSTS";
+export const LOAD_POSTS_SUCCESS ="LOAD_POSTS_SUCCESS";
+export const LOAD_POSTS_ERROR ="LOAD_POSTS_ERROR";
