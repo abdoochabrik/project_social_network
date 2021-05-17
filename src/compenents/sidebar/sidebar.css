@@ -5,7 +5,10 @@
     position: sticky;
     top: 50px;
 }
-
+@media  (max-width: 1024px) {
+    .sidebar{ 
+      flex: 1.5; 
+    } }
 ::-webkit-scrollbar {
     width: 5px;
 }

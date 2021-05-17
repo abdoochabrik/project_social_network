@@ -3,7 +3,8 @@ import  "./post.css";
 //import { Users } from "../../Data";
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+import {format} from "timeago.js";
+import { Link } from 'react-router-dom';
 function Post({ post }) {
 
 const [like,setlike]=useState(post.likes.length);
@@ -24,7 +25,7 @@ const [user,setUser]=useState([]);
             }
             fetchUsers();
             
-      },[]
+      },[post.userId]
 
       )
 
@@ -33,8 +34,11 @@ const [user,setUser]=useState([]);
             <div className="postWrapper">
                   <div className="postTop">
                       <div className="postTopLeft">
+                            <Link to={`profile:${ user.username }`}>
                              <img src={user.picture || PF+"/post/avatarP.jpg"} alt="" className="postProfileImage"/>
+                             </Link>
                              <span className="postUserName">{ user.username}</span>
+                             <span className="postDate"> {format(post.date)} </span>
                       </div>
                       <div className="postTopRight"> 
                             <MoreVert/>

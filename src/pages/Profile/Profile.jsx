@@ -22,7 +22,7 @@ export default function Profile() {
                      <img src={`${PF}/WhatsApp Image 2021-03-09 at 21.11.04 (2).jpeg`}  alt="" className="profileUserImage"/>
                  </div> <br/>
                  <div className="profileInfo">
-                     <h4 className="profileInfoName">chabrik abdellatif</h4>
+                     <h4 className="profileInfoName">yassine</h4>
                      <div className="profileInfoStat">nothing is free</div>
                  </div>
             </div>     <br/><br/>  

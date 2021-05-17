@@ -30,6 +30,11 @@
     font-weight: 500;
     margin-left: 8px;
 }
+.postDate{
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 16px;
+}
 .postCenter{
     margin: 20px 0;
 }
