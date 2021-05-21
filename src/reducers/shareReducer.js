@@ -2,9 +2,8 @@ import {ADD_POST} from '../constants/types'
 
 const initialstate ={
     userId : '',
-    descripton :'',
-    text : '',
-    picture : '',
+    description :'',
+    picture: null,
     date : null    
     }
 export default function(state = initialstate, action){
@@ -12,11 +11,10 @@ export default function(state = initialstate, action){
         case ADD_POST :
             return {
                 ... state,
-                descripton:action.payload.descripton,
+                description:action.payload.description,
                 userId : action.payload.userId,
                 date : action.payload.date,
-                picture : action.payload.picture,
-                text : action.payload.text
+                picture : action.payload.picture
             } ;
         default:
              return state;
