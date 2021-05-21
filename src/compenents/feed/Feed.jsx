@@ -1,26 +1,31 @@
 import  "./feed.css";
 import Post from '../../compenents/post/Post' 
-import { Posts } from '../../Data';
 import ShareContainer from '../../containers/ShareContainer'
 import { useEffect } from 'react'
+import CommentListContainer from '../../containers/CommetnListContainer'
 
 
 function Feed({postsData, getPosts}) {
-
-      console.log(postsData)
 
       useEffect(() => {
             getPosts()
             
       }, [getPosts])
 
+      const {posts, error, isLoading} = postsData;
     return (
+         
       <div className="feed" >
             <div className="Wrapper">
                   <ShareContainer/>
-                  { Posts.map((p) => (
-                  <Post key={p.id} post={p} />
+                  {posts && posts.map((p) => (
+                        <div>
+                               <Post key={p._id} post={p} />
+                               <CommentListContainer/>
+                        </div>
+                 
                   ))}
+                  
             </div>
       </div>
     );

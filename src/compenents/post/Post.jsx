@@ -19,15 +19,15 @@ const likeHandler = () => {
                   <div className="postTop">
                       <div className="postTopLeft">
                              <img src="/assets/WhatsApp Image 2021-03-09 at 21.11.04 (2).jpeg" alt="" className="postProfileImage"/>
-                             <span className="postUserName">{ Users.filter(u => u.id === post.userId)[0].username}</span>
+                             <span className="postUserName">{ Users.filter(u => u.id === post.userId)}</span>
                       </div>
                       <div className="postTopRight"> 
                             <MoreVert/>
                       </div>
                   </div>
                   <div className="postCenter">
-                      <span className="postText">{ post?.desc }</span>
-                      <img src="/assets/WhatsApp Image 2021-03-09 at 21.11.04 (2).jpeg" alt="" className="postImage"/>
+                      <span className="postText">{ post.description }</span>
+                      <img src={post.pictureUrl}  className="postImage"/>
                   </div>
                   <div className="postBottom">
 

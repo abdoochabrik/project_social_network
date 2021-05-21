@@ -4,7 +4,13 @@ import axios from 'axios';
 
 const addPost = post => dispatch => {
     axios
-        .post('/Posts', post)
+        .post('/Posts', post, {
+            baseURL: "https://apisoc.herokuapp.com/",
+            headers: {
+            Accept: 'application/json',
+            'Content-Type': 'multipart/form-data'
+        }
+         })
         .then(res =>
             dispatch(
                 {

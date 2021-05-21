@@ -1,13 +1,14 @@
 import { connect } from 'react-redux'
-import getPosts from '../actions/postActions'
 import Feed from '../compenents/feed/Feed'
+import getPosts from '../actions/postActions'
 
 const mapStateToProps = state => {
     return {
-        postsData : state.posts
+        postsData : state.postsData
     }
     
 }
+
 
 const mapDispatchToProps = dispatch => {
     return {
