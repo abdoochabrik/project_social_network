@@ -5,10 +5,14 @@ import Register from './pages/register/Register.jsx';
 import CommentList from './compenents/comment/CommentList'
 import FeedContainer from './containers/FeedContainer'
 import ShareContainer from './containers/ShareContainer'
+import Sidebar from './compenents/sidebar/sidebar';
+import Rightbar from './compenents/rightbar/Rightbar';
+import Chat from './pages/chat/Chat.jsx';
 function App() {
   return (
     <>
-      <FeedContainer/>
+      { /*<FeedContainer/> */}
+      <Chat/>
       {/* <CommentList/> */}
     </>
   );

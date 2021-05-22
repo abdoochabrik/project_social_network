@@ -9,7 +9,6 @@ function Feed({postsData, getPosts}) {
 
       useEffect(() => {
             getPosts()
-            
       }, [getPosts])
 
       const {posts, error, isLoading} = postsData;
@@ -25,10 +24,8 @@ function Feed({postsData, getPosts}) {
                         </div>
                  
                   ))}
-                  
             </div>
       </div>
     );
-  }
-  
+  }  
   export default Feed;
