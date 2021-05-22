@@ -11,6 +11,7 @@ import CommentList from './compenents/comment/CommentList'
 import Topbar from './compenents/topbar/Topbar'
 import FeedContainer from './containers/FeedContainer'
 import ShareContainer from './containers/ShareContainer'
+<<<<<<< HEAD
 import './App.css'
 function App() {
   return (
@@ -32,6 +33,18 @@ function App() {
         </Switch>
         </div> 
     </Router>
+=======
+import Sidebar from './compenents/sidebar/sidebar';
+import Rightbar from './compenents/rightbar/Rightbar';
+import Chat from './pages/chat/Chat.jsx';
+function App() {
+  return (
+    <>
+      { /*<FeedContainer/> */}
+      <Chat/>
+      {/* <CommentList/> */}
+    </>
+>>>>>>> dff059b9ce1817eb3ef3157fe93c97a31e7d2572
   );
 }
 
