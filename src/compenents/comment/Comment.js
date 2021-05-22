@@ -1,7 +1,7 @@
 import React from 'react'
 import { Divider, Avatar, Grid, Paper } from "@material-ui/core";
 import Post from '../post/Post';
-
+import {format} from "timeago.js"
 
 const imgLink =
   "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260";
@@ -21,7 +21,7 @@ function Comment({comment}) {
               {comment.text}
             </p>
             <p style={{ textAlign: "left", color: "gray" }}>
-              {comment.date}
+              {format(comment.date)}
             </p>
           </Grid>
         </Grid>
