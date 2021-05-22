@@ -1,8 +1,8 @@
 import "./profile.css";
-import Topbar from "../../compenents/topbar/topbar";
+import Topbar from "../../compenents/topbar/Topbar";
 import Sidebar from "../../compenents/sidebar/sidebar";
 import Rightbar from "../../compenents/rightbar/Rightbar";
-import Feed from "../../compenents/feed/Feed";
+import FeedContainer from "../../containers/FeedContainer";
 
 export default function Profile() {
     return(
@@ -24,7 +24,7 @@ export default function Profile() {
                  </div>
              </div> <br/><br/>
              <div className="profileRightBottom">
-                <Feed/>
+                <FeedContainer/>
                 <Rightbar profile/>
             </div>  
             
