@@ -16,6 +16,7 @@
     "react-scripts": "4.0.3",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
+    "timeago.js": "^4.0.2",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
@@ -26,7 +27,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy" :"https://apisoc.herokuapp.com/",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -49,5 +49,6 @@
     "concurrently": "^6.0.2",
     "faker": "^5.5.3",
     "json-server": "^0.16.3"
-  }
+  },
+  "proxy": "http://localhost:8800/api"
 }

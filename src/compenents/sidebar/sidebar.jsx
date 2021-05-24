@@ -3,7 +3,13 @@ import  "./sidebar.css";
 import { Users } from '../../Data';
 import {RssFeed, HelpOutline, WorkOutline, Event, School, WorkOffOutlined} from '@material-ui/icons';
 import Friend from "../friend/Friend";
+import axios from "axios";
+import { Link } from 'react-router-dom';
+import { AuthContext } from "../../context/AuthContext";
+
 function sidebar() {
+
+    
     return (
       <div className="sidebar">
            <div className="sidebarWrapper">

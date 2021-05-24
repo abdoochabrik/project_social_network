@@ -54,6 +54,9 @@
     font-size: 25px;
     cursor: pointer;
 }
+.loginButton:focus{
+    outline: none;
+}
 .loginForgot{
     text-align: center;
     color: royalblue;
