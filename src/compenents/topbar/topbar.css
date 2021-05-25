@@ -1,7 +1,7 @@
 .topbarContainer{
     height: 50px;
     width: 100%;
-    background-color:cornflowerblue;
+    background-color:#58595B;
     display: flex;
     align-items: center;
     position: sticky;
@@ -64,7 +64,7 @@
   display: flex;
 }
 .topbarIconItem{
-   margin-right: 15px;
+   margin-right: 20px;
    cursor: pointer;
    position: relative;
    color: white;

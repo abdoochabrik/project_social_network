@@ -1,4 +1,5 @@
 .post{
+    background-color: #D1D3D4;
     width: 100%;
     border-radius: 10px;
     margin: 30px 0;
@@ -24,8 +25,8 @@
     align-items: center;
 }
 .postProfileImage{
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -50,9 +51,10 @@
     justify-content: space-between;
 }
 .aimer{
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
     cursor: pointer;
+    border-radius: 50%;
 }
 .postBottomLeft{
     display: flex;

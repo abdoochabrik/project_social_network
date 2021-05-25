@@ -23,8 +23,12 @@ function Topbar() {
              <div className="topbarLinks">
                <span className="topbarLink">Home</span>
                <span className="topbarLink">Deconnexion</span>
+               <Link to ="/chat" style={{textDecoration: "none"}} >
+               <span className="topbarLink" style={{color: "white"}}>Messenger</span>
+               </Link>
+               
              </div>
-             <div className="topbarIcons">
+            {/* <div className="topbarIcons">
                <div className="topbarIconItem">
                  <Person/>
                  <span className="topbarIconBadge">2</span>
@@ -38,6 +42,7 @@ function Topbar() {
                  <span className="topbarIconBadge">3</span>
                </div>
              </div>
+*/}
              <Link to = {"/profile/" + user?.username}>
              <img src={user?.profilePicture ? PF + user?.profilePicture : PF + "/profile.png"} alt="" className="topbarImage"/>
              </Link>          
