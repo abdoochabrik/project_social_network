@@ -10,6 +10,7 @@ import Home from './pages/home/Home.js'
 import LoginContainer from './containers/LoginContainer';
 import Profile from './pages/Profile/Profile.jsx';
 import RegisterContainer from './containers/RegisterContainer.js';
+import Description from './pages/description/Description'
 import './App.css'
 
 function App() {
@@ -27,11 +28,13 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/login" component={LoginContainer} />
           <Route  path="/signUp" component={RegisterContainer} />
+          <Route  path="/social-network-app" component={Description} />
           <Route  path="/profile" component={Profile} />
         </Switch>
       </div> 
     </Router>
   );
+
 }
 
 export default App;

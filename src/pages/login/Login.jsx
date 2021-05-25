@@ -1,6 +1,7 @@
 import './login.css'
 import {useState} from 'react'
 import {Redirect} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 export default function Login({auth,signIn}) {
     const [creds, setCreds] = useState({
@@ -50,8 +51,9 @@ export default function Login({auth,signIn}) {
                         />
                         <button className="loginButton"
                         onClick={loginSubmit} >Log In</button>
-                        <span className="loginForgot">forgot your password?</span>
-                        <button className="loginCreate">create a new account</button>
+                        <Link to='/signUp'>
+                            <button className="loginCreate">create a new account</button>
+                        </Link>
                     </div>
               </div>
           </div>
