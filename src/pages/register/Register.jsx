@@ -1,7 +1,8 @@
 import './register.css'
 import {useState} from 'react'
+import {Redirect} from 'react-router-dom'
 
-export default function Register({addUser}) {
+export default function Register({signUp, auth}) {
     const [user, setUser] = useState({
         "username":'',     
         "email":'',        
@@ -19,7 +20,7 @@ export default function Register({addUser}) {
     if (password !== passwordAgain) {
         alert("Passwords don't match");
     } else {
-        addUser(user)
+        signUp(user)
         setUser({
             "username":'',     
             "email":'',        
@@ -28,7 +29,7 @@ export default function Register({addUser}) {
             })
         }
     }
-
+   if(auth.id) return <Redirect to="/" />
    return (
       <div className="login">
           <div className="loginWrapper">

@@ -3,14 +3,14 @@ import shareReducer from './shareReducer'
 import postReducer from './postReducer'
 import addCommentReducer from './addCommentReducer'
 import commentReducer from './commentReducer'
-import registerReducer from './registerReducer'
+import auth from './authReducer'
 
 const reducers = combineReducers({
     sharePost : shareReducer,
     postsData : postReducer,
     addComment : addCommentReducer,
     commentsData : commentReducer,
-    user: registerReducer
+    auth: auth
 })
 
 export default reducers;

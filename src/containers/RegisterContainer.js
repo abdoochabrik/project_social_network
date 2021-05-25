@@ -1,12 +1,20 @@
 import {connect} from 'react-redux';
 import Register from '../pages/register/Register'
-import addUser from '../actions/registerActions'
+import {signUp} from '../actions/authActions'
 
 
 const mapDispatchToProps = dispatch =>{
     return {
-        addUser : (user)=>dispatch(addUser(user))
+        signUp : (user)=>dispatch(signUp(user))
     }
 } 
 
-export default connect(null, mapDispatchToProps)(Register)
+const mapStateToProps = state =>{
+    return {
+        auth : state.auth
+    }
+} 
+
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Register)

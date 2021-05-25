@@ -1,15 +1,24 @@
 import './topbar.css'
 import { Search, Person, Chat, Notifications } from '@material-ui/icons'
-import {Link} from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
+import {signOut} from '../../actions/authActions'
+import { useDispatch } from 'react-redux'
+
 
 function Topbar() {
-    return (
+
+  const history =useHistory();
+  const dispatch = useDispatch();
+  const logOut = () =>{
+    dispatch(signOut())
+    history.push('/login')
+  }
+  return (
 
       <div className="topbarContainer">
 
            <div className="topbarLeft">
-             <Link to="/" ><span className="logo">social network</span> </Link>
-              
+             <Link to="/" ><span className="logo">social network</span> </Link>     
             </div>
            <div className="topbarCenter">
              <div className="searchbar">
@@ -20,7 +29,7 @@ function Topbar() {
            <div className="topbarRight">
              <div className="topbarLinks">
                <Link to="/" ><span className="topbarLink">Home</span> </Link>
-               <Link to="/login" ><span className="topbarLink">Deconnexion</span></Link>
+               <Link onClick={logOut} to="/login" ><span className="topbarLink">Log out</span></Link>
              </div>
              <div className="topbarIcons">
                <div className="topbarIconItem">

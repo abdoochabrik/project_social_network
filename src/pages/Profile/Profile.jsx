@@ -4,6 +4,7 @@ import Sidebar from "../../compenents/sidebar/sidebar";
 import Rightbar from "../../compenents/rightbar/Rightbar";
 import FeedContainer from "../../containers/FeedContainer";
 
+
 export default function Profile() {
     return(
 

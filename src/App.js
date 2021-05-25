@@ -2,49 +2,35 @@ import {
   BrowserRouter as Router,
   Route,
   Switch
-  } from 'react-router-dom'
+  } from 'react-router-dom';
+import {useEffect} from 'react';
+import {useDispatch} from 'react-redux'
+import {loadUser} from './actions/authActions'
 import Home from './pages/home/Home.js'
-import Login from './pages/login/Login.jsx';
+import LoginContainer from './containers/LoginContainer';
 import Profile from './pages/Profile/Profile.jsx';
-import SingUp from './pages/register/Register.jsx';
-import CommentList from './compenents/comment/CommentList'
-import Topbar from './compenents/topbar/Topbar'
-import FeedContainer from './containers/FeedContainer'
-import ShareContainer from './containers/ShareContainer'
-<<<<<<< HEAD
+import RegisterContainer from './containers/RegisterContainer.js';
 import './App.css'
+
 function App() {
+  
+  const dispatch = useDispatch();
+  
+  useEffect(() => {
+    dispatch(loadUser())
+  }, [dispatch])
+
   return (
     <Router>
       <div className="App" >
         <Switch>
-          <Route exact path="/" >
-            <Home/>
-          </Route>
-          <Route path="/login" >
-            <Login/>
-          </Route>
-          <Route  path="/signUp" >
-            <SingUp/>
-          </Route>
-          <Route  path="/profile" >
-            <Profile/>
-          </Route>
+          <Route exact path="/" component={Home} />
+          <Route path="/login" component={LoginContainer} />
+          <Route  path="/signUp" component={RegisterContainer} />
+          <Route  path="/profile" component={Profile} />
         </Switch>
-        </div> 
+      </div> 
     </Router>
-=======
-import Sidebar from './compenents/sidebar/sidebar';
-import Rightbar from './compenents/rightbar/Rightbar';
-import Chat from './pages/chat/Chat.jsx';
-function App() {
-  return (
-    <>
-      { /*<FeedContainer/> */}
-      <Chat/>
-      {/* <CommentList/> */}
-    </>
->>>>>>> dff059b9ce1817eb3ef3157fe93c97a31e7d2572
   );
 }
 
