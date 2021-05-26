@@ -3,7 +3,6 @@ import './chat.css';
 import Topbar from "../../compenents/topbar/topbar";
 import Conversation from '../../compenents/conversation/Conversation';
 import Message from '../../compenents/message/Message';
-import ChatOnline from '../../compenents/chatOnline/ChatOnline';
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import axios from 'axios';
@@ -88,18 +87,6 @@ export default function Chat() {
                             ></textarea>
                            <button className="send" onClick={handleSubmit}>send</button>
                      </div></> : <span className="openConversation">Start a chat right Now</span>  }
-                 </div>
-             </div>
-             <div className="chatOnline">
-                 <div className="chatOnlineWrapper">
-                     <ChatOnline/>
-                     <ChatOnline/>
-                     <ChatOnline/>
-                     <ChatOnline/>
-                     <ChatOnline/>
-                     <ChatOnline/>
-                     <ChatOnline/>
-                     <ChatOnline/>
                  </div>
              </div>
         </div>

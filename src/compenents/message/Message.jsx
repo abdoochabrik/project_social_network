@@ -4,7 +4,7 @@ export default function Message({message,me}) {
     return (
         <div className={me ? "message me" : "message"}>
             <div className="messageTop">
-            <img src="/assets/1.jpeg" alt="" className="messageImage" />
+           {/* <img src="/assets/1.jpeg" alt="" className="messageImage" />*/}
                 <p className="messageText">{message.text}</p>
             </div>
 

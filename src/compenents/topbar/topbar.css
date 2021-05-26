@@ -49,6 +49,10 @@
 }
 
 .topbarRight{
+    margin-left: 20px;
+}
+
+.topbarRight{
     flex: 4;
     display: flex;
     align-items: center;
@@ -59,6 +63,10 @@
     margin-right: 10px;
     font-size: 14px;
     cursor: pointer;
+}
+
+.topbarLinks{
+    margin-right: 940px;
 }
 .topbarIcons{
   display: flex;
@@ -89,4 +97,5 @@
     border-radius: 50%;
     object-fit: cover;
     cursor: pointer;
+    margin-right: 20px;
 }

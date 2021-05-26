@@ -1,10 +1,9 @@
 import {combineReducers} from 'redux';
 import shareReducer from './shareReducer'
-import postReducer from './postReducer'
+import userReducer from '../reducers/userReducer'
 
 const reducers = combineReducers({
-    sharePost : shareReducer,
-    posts : postReducer
-})
+    user: userReducer
+});
 
 export default reducers;

@@ -1,5 +1,6 @@
 .profile{
     display: flex;
+    background-color: #808285;
 }
 .profileRight{
     flex: 9;

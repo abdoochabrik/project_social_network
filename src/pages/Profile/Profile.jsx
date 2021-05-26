@@ -33,7 +33,7 @@ useEffect( () => {
             <div className="profileRight">
             <div className="profileRightTop">
                  <div className="profileCover">
-                     <img src={ user.coverPicture || PF+"profile.png"} alt="" className="profileCoverImage"/>
+                     <img src={ PF + user.coverPicture || PF+"profile.png"} alt="" className="profileCoverImage"/>
                      <img src={ PF + user.profilePicture || PF+"profile.png"} alt="" className="profileUserImage"/>
                  </div> <br/>
                  <div className="profileInfo">

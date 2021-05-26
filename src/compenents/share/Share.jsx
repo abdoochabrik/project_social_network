@@ -13,12 +13,12 @@ function Share() {
    const submitHandler = async (e) => {
        e.preventDefault();
        const newPost = {
-           userId: user._id,
+           userId: user.id,
            desc: desc.current.value      
        } 
        if(file) {
            const data = new FormData();
-           const fileName = Date.now() + file.name
+           const fileName = /*Date.now()*/  file.name
            data.append("file", file)
            data.append("name", fileName)
            newPost.image = fileName;
@@ -37,7 +37,7 @@ function Share() {
     return (
       <div className="share" >
           <div className="Wrapper">
-          <form action="" method="post">
+          <div action="" method="post">
               <div className="shareTop">
                   <img src={ user.profilePicture ? PF + user.profilePicture : PF+"profile.png"} alt="" className="shareTopImg"/>
                   <input
@@ -53,27 +53,12 @@ function Share() {
                             <span className="shareOptionText">Photo</span>
                             <input style={{display : "none"}} type="file" id="file" accept=".png, .jpeg, .jpg" onChange={(e) => setFile(e.target.files[0])} />
                       </label>
-                      <div className="shareOption">
-                            <Label htmlColor="blue" className="shareIcon"/>
-                            <span className="shareOptionText">tag</span>
                       </div>
-                      <div className="shareOption">
-                            <Room htmlColor="green" className="shareIcon"/>
-                            <span className="shareOptionText">Location</span>
-                      </div>
-                      <div 
-                      className="shareOption">
-                            <EmojiEmotions 
-                            htmlColor="goldenrod" 
-                            className="shareIcon"/>
-                            <span className="shareOptionText">Feeling</span>
-                      </div>
-                  </div>
                   <button 
                   type="submit" 
                   className="shareButton">share</button>
               </form>
-              </form>
+              </div>
           </div>
       </div>
     );

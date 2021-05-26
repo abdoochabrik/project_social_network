@@ -3,6 +3,7 @@ import Login from './pages/login/Login.jsx';
 import Profile from './pages/Profile/Profile.jsx';
 import Register from './pages/register/Register.jsx';
 import Chat from './pages/chat/Chat.jsx';
+import Description from './pages/description/Description'
 
 //import CommentList from './compenents/comment/CommentList'
 //import FeedContainer from './containers/FeedContainer'
@@ -22,7 +23,7 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/">
-            {user ? <Home/> : <Register/>}
+            {user ? <Home/> : <Description/>}
         </Route>
 
         <Route path="/profile/:username">

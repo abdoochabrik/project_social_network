@@ -68,3 +68,14 @@
     padding: 7px;
     font-weight: 500;
 }
+.rightbarFollowingImg{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.mightfollow{
+    margin-left: 30px;
+    background-color:gray;
+    padding: 8px;
+    border-radius: 100%;
+}

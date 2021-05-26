@@ -5,7 +5,7 @@
     margin-bottom: 10px;
 }
 .conversation:hover{
-    background-color: lightcoral;
+    background-color: gray;
 }
 .conversationImage{
     width: 40px;
