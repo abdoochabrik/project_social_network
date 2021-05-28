@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useRef } from 'react';
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
-import './register.css'
+import './Register.css'
 
 export default function Register() {
 

@@ -1,12 +1,12 @@
 import { PermMedia, Room, Label, EmojiEmotions} from '@material-ui/icons'
-import  "./share.css";
+import  "./Partager.css";
 import {useContext, useRef, useState} from 'react';
-import { AuthContext } from '../../context/AuthContext';
+import { AuthContext } from '../../context/Context';
 import axios from 'axios';
 
 function Share() {
    const {user} = useContext(AuthContext);
-   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+   const PF = process.env.REACT_APP_PF;
    const desc = useRef();
    const [file,setFile] = useState(null);
 

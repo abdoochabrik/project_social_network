@@ -1,10 +1,10 @@
-import  "./feed.css";
-import Post from '../../compenents/post/Post' 
+import  "./Actualité.css";
+import Post from '../post/Post' 
 import { Posts } from '../../Data';
-import Share from '../../compenents/share/Share';
+import Share from '../Partager/Partager';
 import { useState,useEffect, useContext } from 'react'
 import axios from "axios"
-import { AuthContext } from "../../context/AuthContext";
+import { AuthContext } from "../../context/Context";
 
 function Feed({ username }) {
 

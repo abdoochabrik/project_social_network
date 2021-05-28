@@ -4,12 +4,12 @@ import { Users } from '../../Data';
 import {RssFeed, HelpOutline, WorkOutline, Event, School, WorkOffOutlined} from '@material-ui/icons';
 import axios from "axios";
 import { Link } from 'react-router-dom';
-import { AuthContext } from "../../context/AuthContext";
+import { AuthContext } from "../../context/Context";
 import { useContext, useEffect, useState } from "react";
 
 function sidebar() {
     const {user} = useContext(AuthContext)
-    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+    const PF = process.env.REACT_APP_PF;
     const[friends, setFriends] = useState([]);
     useEffect(() => {
         const getFriends = async () => {
@@ -21,7 +21,7 @@ function sidebar() {
               }
         };
         getFriends();
-    },[user.id]);
+    },[user?.id]);
         
     return (
       <div className="sidebar">

@@ -1,11 +1,9 @@
 
-import Topbar from "../../compenents/topbar/topbar";
+import Topbar from "../../compenents/Navbar/Navbar";
 import Sidebar from "../../compenents/sidebar/sidebar";
-import Rightbar from "../../compenents/rightbar/Rightbar";
-import Feed from "../../compenents/feed/Feed";
+import Actualité from "../../compenents/Actualité/Actualité";
 
-import './home.css'
-import Chat from '../chat/Chat'
+import './Home.css'
 
 function Home() {
     return (
@@ -16,9 +14,7 @@ function Home() {
     <div className="homeContainer">
       
         <Sidebar/>
-        <Feed/>
-     
-    
+        <Actualité/>
       
     </div>
 

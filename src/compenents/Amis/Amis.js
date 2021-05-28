@@ -1,8 +1,8 @@
-import "./online.css";
+import "./Amis.css";
 
 export default function Online({user}) {
 
-    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+    const PF = process.env.REACT_APP_PF;
     return (
         <li className="rightbarFriend"> 
         <div className="rightbarProfileImgContainer">

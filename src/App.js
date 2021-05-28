@@ -1,8 +1,8 @@
-import Home from './pages/home/Home.js'
-import Login from './pages/login/Login.jsx';
-import Profile from './pages/Profile/Profile.jsx';
-import Register from './pages/register/Register.jsx';
-import Chat from './pages/chat/Chat.jsx';
+import Home from './pages/home/Home'
+import Login from './pages/login/Login';
+import Profile from './pages/Profile/Profile';
+import Register from './pages/register/Register';
+import Chat from './pages/chat/Chat';
 import Description from './pages/description/Description'
 
 //import CommentList from './compenents/comment/CommentList'
@@ -15,7 +15,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import { useContext } from 'react';
-import { AuthContext } from './context/AuthContext.js';
+import { AuthContext } from './context/Context.js';
 function App() {
 
   const { user } = useContext(AuthContext);

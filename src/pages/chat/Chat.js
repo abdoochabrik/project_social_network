@@ -1,10 +1,10 @@
 import './chat.css';
 //import Topbar  from "../../components/topbar/topbar"
-import Topbar from "../../compenents/topbar/topbar";
+import Topbar from "../../compenents/Navbar/Navbar";
 import Conversation from '../../compenents/conversation/Conversation';
 import Message from '../../compenents/message/Message';
 import { useContext, useEffect, useState } from 'react';
-import { AuthContext } from '../../context/AuthContext';
+import { AuthContext } from '../../context/Context';
 import axios from 'axios';
 
 export default function Chat() {
@@ -74,7 +74,7 @@ export default function Chat() {
                      { currentChat ?
                      <>
                      <div className="chatBoxTop">
-                         {messages.map((m) => (
+                         {messages?.map((m) => (
                                  <Message message={m} me={m.senderId !== user.id}/>  
                          ))}
                                                   

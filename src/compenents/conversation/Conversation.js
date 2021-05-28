@@ -1,10 +1,10 @@
 import axios from "axios";
 import { useContext, useEffect, useState } from "react"
-import "./conversation.css"
-import {AuthContext} from "../../context/AuthContext"
+import "./Conversation.css"
+//import {AuthContext} from "../../context/Context"
 export default function Conversation({conversation, currentUser}) {
     const [username, setUser] = useState(null);
-    const PF = process.env.REACT_APP_PUBLIC_FOLDER
+    const PF = process.env.REACT_APP_PF
     const [picture, setPicture] = useState(null);
     const [userss, setUsers] = useState([])
     

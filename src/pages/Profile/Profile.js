@@ -1,8 +1,8 @@
-import "./profile.css";
-import Topbar from "../../compenents/topbar/topbar";
+import "./Profile.css";
+import Topbar from "../../compenents/Navbar/Navbar";
 import Sidebar from "../../compenents/sidebar/sidebar";
 import Rightbar from "../../compenents/rightbar/Rightbar";
-import Feed from "../../compenents/feed/Feed";
+import Actualité from "../../compenents/Actualité/Actualité";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from 'react-router'
@@ -11,7 +11,7 @@ export default function Profile() {
 const [user, setUser]=useState({});
 const username = useParams().username;
 console.log(username)
-const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+const PF = process.env.REACT_APP_PF;
 
 useEffect( () => {
     const fetchUser =  async () => {
@@ -42,7 +42,7 @@ useEffect( () => {
                  </div>
              </div> <br/><br/>
              <div className="profileRightBottom">
-                <Feed username={username}/>
+                <Actualité username={username}/>
                 <Rightbar user = {user}/>
             </div>  
             

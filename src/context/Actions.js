@@ -1,5 +1,5 @@
 export const LoginStart = (userCredentials) => ({
-    type: "LOGIN_START"
+    type: "LOGIN"
 })
 export const LoginSuccess = (user) => ({
     type: "LOGIN_SUCCESS",
@@ -14,6 +14,6 @@ export const FOLLOW = (userId) => ({
     payload: userId,
 })
 export const UNFOLLOW = (userId) => ({
-    type: "FOLLOW",
+    type: "UNFOLLOW",
     payload: userId,
 })

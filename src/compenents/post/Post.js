@@ -1,11 +1,11 @@
 import {MoreVert} from '@material-ui/icons'
-import  "./post.css"; 
+import  "./Post.css"; 
 //import { Users } from "../../Data";
 import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import {format} from 'timeago.js';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../../context/AuthContext';
+import { AuthContext } from '../../context/Context';
 import DeleteIcon from '@material-ui/icons/Delete';
 function Post({ post }) {
 
@@ -13,7 +13,7 @@ const [like, setLike]=useState(post.likes.length);
 const [isliked, setIsliked]=useState(false);
 const [user, setUser]=useState({});
 
-const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+const PF = process.env.REACT_APP_PF;
 const {user:currentUser} = useContext(AuthContext);
 useEffect( () => {
     const fetchUser =  async () => {
